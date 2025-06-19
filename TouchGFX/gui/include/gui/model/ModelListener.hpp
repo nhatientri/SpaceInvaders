@@ -9,7 +9,7 @@ public:
     ModelListener() : model(0) {}
     
     virtual ~ModelListener() {}
-
+    virtual void updatePlayerX(int x) {}
     void bind(Model* m)
     {
         model = m;

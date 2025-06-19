@@ -2,7 +2,7 @@
   "Application": {
     "Screens": [
       {
-        "Name": "Screen1",
+        "Name": "StartScreen",
         "Components": [
           {
             "Type": "ButtonWithLabel",
@@ -38,17 +38,17 @@
               "Type": "ActionGotoScreen",
               "ScreenTransitionType": "ScreenTransitionSlide",
               "ScreenTransitionDirection": "East",
-              "ActionComponent": "Screen2"
+              "ActionComponent": "GameScreen"
             }
           }
         ]
       },
       {
-        "Name": "Screen2",
+        "Name": "GameScreen",
         "Components": [
           {
             "Type": "Image",
-            "Name": "image1",
+            "Name": "player",
             "X": 90,
             "Y": 275,
             "Width": 60,
@@ -57,7 +57,7 @@
           },
           {
             "Type": "Image",
-            "Name": "image2",
+            "Name": "red",
             "X": 100,
             "Y": 144,
             "Width": 40,
@@ -66,7 +66,7 @@
           },
           {
             "Type": "Image",
-            "Name": "image3",
+            "Name": "green",
             "X": 100,
             "Y": 95,
             "Width": 40,
@@ -75,7 +75,7 @@
           },
           {
             "Type": "Image",
-            "Name": "image4",
+            "Name": "yellow",
             "X": 100,
             "Y": 42,
             "Width": 40,
@@ -93,7 +93,7 @@
       "Height": 320
     },
     "SelectedColorDepth": 16,
-    "StartupScreenName": "Screen1",
+    "StartupScreenName": "StartScreen",
     "SelectedStartupLanguage": "GB",
     "TouchGfxPath": "../Middlewares/ST/touchgfx",
     "UIPath": ".",
