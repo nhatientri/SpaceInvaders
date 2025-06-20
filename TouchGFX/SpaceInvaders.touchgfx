@@ -56,33 +56,6 @@
             "RelativeFilename": "player.png"
           },
           {
-            "Type": "Image",
-            "Name": "red",
-            "X": 110,
-            "Y": 144,
-            "Width": 20,
-            "Height": 16,
-            "RelativeFilename": "red.png"
-          },
-          {
-            "Type": "Image",
-            "Name": "green",
-            "X": 110,
-            "Y": 103,
-            "Width": 20,
-            "Height": 16,
-            "RelativeFilename": "green.png"
-          },
-          {
-            "Type": "Image",
-            "Name": "yellow",
-            "X": 110,
-            "Y": 66,
-            "Width": 20,
-            "Height": 16,
-            "RelativeFilename": "yellow.png"
-          },
-          {
             "Type": "TextArea",
             "Name": "textArea1",
             "Width": 240,

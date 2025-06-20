@@ -1,4 +1,6 @@
 #include <gui/gamescreen_screen/GameScreenView.hpp>
+#include <images/BitmapDatabase.hpp>
+
 GameScreenView::GameScreenView()
 {
 
@@ -7,6 +9,30 @@ GameScreenView::GameScreenView()
 void GameScreenView::setupScreen()
 {
     GameScreenViewBase::setupScreen();
+
+    for (int i = 0; i < MAX_BULLETS; ++i)
+    {
+        bullets[i].setBitmap(Bitmap(BITMAP_BULLET_ID));
+        bullets[i].setVisible(false);
+        add(bullets[i]);
+    }
+
+    int startX = 15;
+    int startY = 30;
+    int spacingX = 35;
+    int spacingY = 25;
+
+    for (int row = 0; row < ROWS; ++row)
+    {
+        for (int col = 0; col < COLS; ++col)
+        {
+            enemies[row][col].setBitmap(Bitmap(enemyBitmaps[row]));
+            enemies[row][col].setXY(startX + col * spacingX, startY + row * spacingY);
+            enemies[row][col].setVisible(true);
+            add(enemies[row][col]);
+        }
+    }
+
 }
 
 void GameScreenView::tearDownScreen()
@@ -25,11 +51,70 @@ void GameScreenView::updateADCValue(int value) {
 
 void GameScreenView::spawnBullet()
 {
-    bullet.setBitmap(Bitmap(BITMAP_BULLET_ID));  // Ảnh đạn bạn đã thêm vào
-    bullet.setXY(player.getX() + player.getWidth() / 2 - bullet.getWidth() / 2,
-                 player.getY() - bullet.getHeight());
+    for (int i = 0; i < MAX_BULLETS; ++i)
+    {
+        if (!bullets[i].isVisible())
+        {
+            bullets[i].setXY(
+                player.getX() + player.getWidth() / 2 - bullets[i].getWidth() / 2,
+                player.getY() - bullets[i].getHeight());
 
-    bullet.setVisible(true);
-    add(bullet);
-    bullet.invalidate();
+            bullets[i].setVisible(true);
+            bullets[i].invalidate();
+            break;  // chỉ bắn 1 viên mỗi lần
+        }
+    }
 }
+
+void GameScreenView::handleTickEvent()
+{
+    for (int i = 0; i < MAX_BULLETS; ++i)
+    {
+        if (bullets[i].isVisible())
+        {
+            int newY = bullets[i].getY() - 4;
+            if (newY < -bullets[i].getHeight())
+            {
+                bullets[i].setVisible(false);  // reset slot
+            }
+            else
+            {
+                bullets[i].moveTo(bullets[i].getX(), newY);
+                bullets[i].invalidate();
+            }
+        }
+    }
+
+    tickCounter++;
+    if (tickCounter < stepDelay)
+        return;  // chưa đến lúc di chuyển
+    tickCounter = 0;  // reset
+
+    // Thực hiện 1 bước theo hướng hiện tại
+    for (int row = 0; row < ROWS; ++row) {
+        for (int col = 0; col < COLS; ++col) {
+            if (!enemies[row][col].isVisible()) continue;
+
+            int x = enemies[row][col].getX();
+            int y = enemies[row][col].getY();
+
+            switch (enemyMoveDir) {
+                case RIGHT: x += stepSize; break;
+                case DOWN:  y += stepSize; break;
+                case LEFT:  x -= stepSize; break;
+                case UP:    y -= stepSize; break;
+            }
+
+            enemies[row][col].moveTo(x, y);
+            enemies[row][col].invalidate();
+        }
+    }
+
+    moveCounter++;
+    if (moveCounter >= maxSteps) {
+        moveCounter = 0;
+        enemyMoveDir = static_cast<Direction>((enemyMoveDir + 1) % 4);  // xoay chiều
+    }
+
+}
+

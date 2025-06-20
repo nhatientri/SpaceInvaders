@@ -16,18 +16,6 @@ GameScreenViewBase::GameScreenViewBase()
     player.setBitmap(touchgfx::Bitmap(BITMAP_PLAYER_ID));
     add(player);
 
-    red.setXY(110, 144);
-    red.setBitmap(touchgfx::Bitmap(BITMAP_RED_ID));
-    add(red);
-
-    green.setXY(110, 103);
-    green.setBitmap(touchgfx::Bitmap(BITMAP_GREEN_ID));
-    add(green);
-
-    yellow.setXY(110, 66);
-    yellow.setBitmap(touchgfx::Bitmap(BITMAP_YELLOW_ID));
-    add(yellow);
-
     textArea1.setPosition(0, 0, 240, 29);
     textArea1.setColor(touchgfx::Color::getColorFromRGB(255, 0, 34));
     textArea1.setLinespacing(0);

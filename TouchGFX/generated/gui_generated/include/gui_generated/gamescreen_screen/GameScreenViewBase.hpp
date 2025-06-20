@@ -28,9 +28,6 @@ protected:
      */
     touchgfx::Box __background;
     touchgfx::Image player;
-    touchgfx::Image red;
-    touchgfx::Image green;
-    touchgfx::Image yellow;
     touchgfx::TextAreaWithOneWildcard textArea1;
 
     /*
