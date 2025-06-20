@@ -13,7 +13,6 @@
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:104:18:virtual void touchgfx::Screen::afterTransition()	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	0	static
 C:/TouchGFXProjects/SpaceInvaders/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:38:6:virtual void GameScreenView::tearDownScreen()	0	static
-C:/TouchGFXProjects/SpaceInvaders/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:69:6:virtual void GameScreenView::handleTickEvent()	24	static
 ../../TouchGFX/gui/include/gui/gamescreen_screen/GameScreenView.hpp:13:13:GameScreenView::~GameScreenView()	16	static
 ../../TouchGFX/gui/include/gui/gamescreen_screen/GameScreenView.hpp:13:13:virtual GameScreenView::~GameScreenView()	8	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:121:18:virtual void touchgfx::Drawable::invalidateContent() const	0	static
@@ -24,4 +23,6 @@ C:/TouchGFXProjects/SpaceInvaders/TouchGFX/gui/src/gamescreen_screen/GameScreenV
 C:/TouchGFXProjects/SpaceInvaders/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:43:6:void GameScreenView::updatePlayerPosition(int)	8	static
 C:/TouchGFXProjects/SpaceInvaders/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:47:6:void GameScreenView::updateADCValue(int)	8	static
 C:/TouchGFXProjects/SpaceInvaders/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:52:6:void GameScreenView::spawnBullet()	16	static
+C:/TouchGFXProjects/SpaceInvaders/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:149:6:bool GameScreenView::bulletCollidesWithAlien(const touchgfx::Image&, const touchgfx::Image&)	12	static
+C:/TouchGFXProjects/SpaceInvaders/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:69:6:virtual void GameScreenView::handleTickEvent()	48	static
 C:/TouchGFXProjects/SpaceInvaders/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:9:6:virtual void GameScreenView::setupScreen()	56	static

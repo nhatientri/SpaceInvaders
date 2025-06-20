@@ -85,6 +85,34 @@ void GameScreenView::handleTickEvent()
         }
     }
 
+    for (int b = 0; b < MAX_BULLETS; ++b)
+    {
+        if (!bullets[b].isVisible()) continue;
+
+        // Kiểm tra với tất cả alien
+        for (int row = 0; row < ROWS; ++row)
+        {
+            for (int col = 0; col < COLS; ++col)
+            {
+                if (!enemies[row][col].isVisible()) continue;
+
+                if (bulletCollidesWithAlien(bullets[b], enemies[row][col]))
+                {
+                    bullets[b].setVisible(false);
+                    enemies[row][col].setVisible(false);
+
+                    bullets[b].invalidate();
+                    enemies[row][col].invalidate();
+
+                    // (Tùy chọn) tăng điểm ở đây
+
+                    goto doneCheckingThisBullet;  // thoát vòng lặp 3 tầng
+                }
+            }
+        }
+    doneCheckingThisBullet:;
+    }
+
     tickCounter++;
     if (tickCounter < stepDelay)
         return;  // chưa đến lúc di chuyển
@@ -116,5 +144,20 @@ void GameScreenView::handleTickEvent()
         enemyMoveDir = static_cast<Direction>((enemyMoveDir + 1) % 4);  // xoay chiều
     }
 
+}
+
+bool GameScreenView::bulletCollidesWithAlien(const Image& bullet, const Image& alien)
+{
+    int bx = bullet.getX();
+    int by = bullet.getY();
+    int bw = bullet.getWidth();
+    int bh = bullet.getHeight();
+
+    int ax = alien.getX();
+    int ay = alien.getY();
+    int aw = alien.getWidth();
+    int ah = alien.getHeight();
+
+    return !(bx + bw < ax || bx > ax + aw || by + bh < ay || by > ay + ah);
 }
 

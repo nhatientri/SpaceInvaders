@@ -16,6 +16,7 @@ public:
     void updatePlayerPosition(int x);
     void updateADCValue(int value);
     void spawnBullet();  // Tạo viên đạn mới
+    bool bulletCollidesWithAlien(const Image& bullet, const Image& alien);
     virtual void handleTickEvent() override;
 protected:
     static const int MAX_BULLETS = 9;
