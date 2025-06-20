@@ -81,6 +81,23 @@
             "Width": 40,
             "Height": 32,
             "RelativeFilename": "yellow.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1",
+            "Width": 240,
+            "Height": 29,
+            "TextId": "adcText",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Blue": 34
+            },
+            "Wildcard1": {
+              "TextId": "adcBuffer",
+              "UseBuffer": true,
+              "BufferSize": 12
+            }
           }
         ],
         "Interactions": []

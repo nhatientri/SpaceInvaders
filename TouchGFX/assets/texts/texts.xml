@@ -10,6 +10,12 @@
       </Text>
     </TextGroup>
     <TextGroup Id="Unsorted">
+      <Text Id="adcText" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">adc value: &lt;value&gt;</Translation>
+      </Text>
+      <Text Id="adcBuffer" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">0</Translation>
+      </Text>
       <Text Id="__SingleUse_27QB" Alignment="Center" TypographyId="Default">
         <Translation Language="GB">Play</Translation>
       </Text>
@@ -20,5 +26,6 @@
     <Typography Id="Large" Font="verdana.ttf" Size="40" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
     <Typography Id="Small" Font="verdana.ttf" Size="10" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
     <Typography Id="Typography_00" Font="verdana.ttf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="counter" Font="verdana.ttf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacters="-,+" WildcardCharacterRanges="0-9" />
   </Typographies>
 </TextDatabase>

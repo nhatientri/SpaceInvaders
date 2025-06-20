@@ -10,6 +10,8 @@ public:
     
     virtual ~ModelListener() {}
     virtual void updatePlayerX(int x) {}
+    virtual void updateADCValue(int value) {}
+    virtual void fireBullet() {}
     void bind(Model* m)
     {
         model = m;

@@ -20,3 +20,11 @@ void GameScreenPresenter::deactivate()
 void GameScreenPresenter::updatePlayerX(int x) {
     view.updatePlayerPosition(x);
 }
+
+void GameScreenPresenter::updateADCValue(int value) {
+	view.updateADCValue(value);
+}
+
+void GameScreenPresenter::fireBullet() {
+    view.spawnBullet();
+}

@@ -12,6 +12,8 @@ public:
     virtual void setupScreen();
     virtual void tearDownScreen();
     void updatePlayerPosition(int x);
+    void updateADCValue(int value);
+    void spawnBullet();  // Tạo viên đạn mới
 protected:
 };
 

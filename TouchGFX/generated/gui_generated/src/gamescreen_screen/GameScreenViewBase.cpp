@@ -4,6 +4,7 @@
 #include <gui_generated/gamescreen_screen/GameScreenViewBase.hpp>
 #include <touchgfx/Color.hpp>
 #include <images/BitmapDatabase.hpp>
+#include <texts/TextKeysAndLanguages.hpp>
 
 GameScreenViewBase::GameScreenViewBase()
 {
@@ -26,6 +27,14 @@ GameScreenViewBase::GameScreenViewBase()
     yellow.setXY(100, 42);
     yellow.setBitmap(touchgfx::Bitmap(BITMAP_YELLOW_ID));
     add(yellow);
+
+    textArea1.setPosition(0, 206, 240, 29);
+    textArea1.setColor(touchgfx::Color::getColorFromRGB(255, 0, 34));
+    textArea1.setLinespacing(0);
+    Unicode::snprintf(textArea1Buffer, TEXTAREA1_SIZE, "%s", touchgfx::TypedText(T_ADCBUFFER).getText());
+    textArea1.setWildcard(textArea1Buffer);
+    textArea1.setTypedText(touchgfx::TypedText(T_ADCTEXT));
+    add(textArea1);
 }
 
 GameScreenViewBase::~GameScreenViewBase()
