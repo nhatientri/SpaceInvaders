@@ -13,7 +13,7 @@ StartScreenViewBase::StartScreenViewBase() :
     __background.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     add(__background);
 
-    playButton.setXY(0, 210);
+    playButton.setXY(0, 227);
     playButton.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_50_MEDIUM_ROUNDED_NORMAL_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_50_MEDIUM_ROUNDED_PRESSED_ID));
     playButton.setLabelText(touchgfx::TypedText(T___SINGLEUSE_27QB));
     playButton.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));

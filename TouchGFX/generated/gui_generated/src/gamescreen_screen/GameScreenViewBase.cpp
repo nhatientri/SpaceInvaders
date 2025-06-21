@@ -16,13 +16,30 @@ GameScreenViewBase::GameScreenViewBase()
     player.setBitmap(touchgfx::Bitmap(BITMAP_PLAYER_ID));
     add(player);
 
-    textArea1.setPosition(0, 0, 240, 29);
+    textArea1.setPosition(0, 291, 240, 29);
     textArea1.setColor(touchgfx::Color::getColorFromRGB(255, 0, 34));
     textArea1.setLinespacing(0);
     Unicode::snprintf(textArea1Buffer, TEXTAREA1_SIZE, "%s", touchgfx::TypedText(T_ADCBUFFER).getText());
     textArea1.setWildcard(textArea1Buffer);
     textArea1.setTypedText(touchgfx::TypedText(T_ADCTEXT));
     add(textArea1);
+
+    score.setXY(23, 0);
+    score.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    score.setLinespacing(0);
+    Unicode::snprintf(scoreBuffer, SCORE_SIZE, "%s", touchgfx::TypedText(T_SCOREBUFFER).getText());
+    score.setWildcard(scoreBuffer);
+    score.resizeToCurrentText();
+    score.setTypedText(touchgfx::TypedText(T_SCORE));
+    add(score);
+
+    highScore.setPosition(120, 0, 114, 48);
+    highScore.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    highScore.setLinespacing(0);
+    Unicode::snprintf(highScoreBuffer, HIGHSCORE_SIZE, "%s", touchgfx::TypedText(T_HIGHSCOREBUFFER).getText());
+    highScore.setWildcard(highScoreBuffer);
+    highScore.setTypedText(touchgfx::TypedText(T_HIGHSCORE));
+    add(highScore);
 }
 
 GameScreenViewBase::~GameScreenViewBase()

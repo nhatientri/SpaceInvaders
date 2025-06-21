@@ -7,7 +7,7 @@
           {
             "Type": "ButtonWithLabel",
             "Name": "playButton",
-            "Y": 210,
+            "Y": 227,
             "Width": 240,
             "Height": 50,
             "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_50_medium_rounded_pressed.png",
@@ -58,6 +58,7 @@
           {
             "Type": "TextArea",
             "Name": "textArea1",
+            "Y": 291,
             "Width": 240,
             "Height": 29,
             "TextId": "adcText",
@@ -70,6 +71,35 @@
               "TextId": "adcBuffer",
               "UseBuffer": true,
               "BufferSize": 12
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "score",
+            "X": 23,
+            "Width": 82,
+            "Height": 48,
+            "TextId": "score",
+            "TextRotation": "0",
+            "AutoSize": true,
+            "Wildcard1": {
+              "TextId": "scoreBuffer",
+              "UseBuffer": true,
+              "BufferSize": 8
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "highScore",
+            "X": 120,
+            "Width": 114,
+            "Height": 48,
+            "TextId": "highScore",
+            "TextRotation": "0",
+            "Wildcard1": {
+              "TextId": "highScoreBuffer",
+              "UseBuffer": true,
+              "BufferSize": 8
             }
           }
         ],

@@ -4,9 +4,18 @@
     <Language Id="GB" />
   </Languages>
   <Texts>
-    <TextGroup Id="Group1">
-      <Text Id="ResourceId2" Alignment="Left" TypographyId="Default">
-        <Translation Language="GB">New Text</Translation>
+    <TextGroup Id="Score">
+      <Text Id="highScore" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">HI-SCORE&#10;&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="highScoreBuffer" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">0</Translation>
+      </Text>
+      <Text Id="scoreBuffer" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">0</Translation>
+      </Text>
+      <Text Id="score" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">SCORE&#10;&lt;value&gt;</Translation>
       </Text>
     </TextGroup>
     <TextGroup Id="Unsorted">

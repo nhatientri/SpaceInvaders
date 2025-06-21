@@ -29,12 +29,18 @@ protected:
     touchgfx::Box __background;
     touchgfx::Image player;
     touchgfx::TextAreaWithOneWildcard textArea1;
+    touchgfx::TextAreaWithOneWildcard score;
+    touchgfx::TextAreaWithOneWildcard highScore;
 
     /*
      * Wildcard Buffers
      */
     static const uint16_t TEXTAREA1_SIZE = 12;
     touchgfx::Unicode::UnicodeChar textArea1Buffer[TEXTAREA1_SIZE];
+    static const uint16_t SCORE_SIZE = 8;
+    touchgfx::Unicode::UnicodeChar scoreBuffer[SCORE_SIZE];
+    static const uint16_t HIGHSCORE_SIZE = 8;
+    touchgfx::Unicode::UnicodeChar highScoreBuffer[HIGHSCORE_SIZE];
 
 private:
 
