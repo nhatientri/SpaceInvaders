@@ -16,13 +16,19 @@ public:
     void updatePlayerPosition(int x);
     void updateADCValue(int value);
     void spawnBullet();  // Tạo viên đạn mới
+    void spawnEnemyBullet(int x, int y);
     bool bulletCollidesWithAlien(const Image& bullet, const Image& alien);
     virtual void handleTickEvent() override;
+    uint32_t getRandom();
+    uint32_t getRandomInRange(uint32_t min, uint32_t max);
+
 protected:
     static const int MAX_BULLETS = 9;
     Image bullets[MAX_BULLETS];
     static const int ROWS = 3;
     static const int COLS = 6;
+	static const int MAX_ENEMY_BULLETS = 5;
+	Image enemyBullets[MAX_ENEMY_BULLETS];
 
     Image enemies[ROWS][COLS];
     BitmapId enemyBitmaps[ROWS] = {

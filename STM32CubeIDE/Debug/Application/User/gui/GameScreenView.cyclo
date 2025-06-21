@@ -12,17 +12,20 @@
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:703:18:virtual void touchgfx::Drawable::setupDrawChain(const touchgfx::Rect&, touchgfx::Drawable**)	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:104:18:virtual void touchgfx::Screen::afterTransition()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	1
-C:/TouchGFXProjects/SpaceInvaders/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:44:6:virtual void GameScreenView::tearDownScreen()	1
-../../TouchGFX/gui/include/gui/gamescreen_screen/GameScreenView.hpp:13:13:GameScreenView::~GameScreenView()	3
+C:/TouchGFXProjects/SpaceInvaders/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:55:6:virtual void GameScreenView::tearDownScreen()	1
+../../TouchGFX/gui/include/gui/gamescreen_screen/GameScreenView.hpp:13:13:GameScreenView::~GameScreenView()	4
 ../../TouchGFX/gui/include/gui/gamescreen_screen/GameScreenView.hpp:13:13:virtual GameScreenView::~GameScreenView()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:121:18:virtual void touchgfx::Drawable::invalidateContent() const	2
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:45:18:virtual void touchgfx::Widget::getLastChild(int16_t, int16_t, touchgfx::Drawable**)	3
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:343:10:void touchgfx::Drawable::setXY(int16_t, int16_t)	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:50:5:touchgfx::Image::Image(const touchgfx::Bitmap&)	1
-C:/TouchGFXProjects/SpaceInvaders/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:4:1:GameScreenView::GameScreenView()	4
-C:/TouchGFXProjects/SpaceInvaders/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:49:6:void GameScreenView::updatePlayerPosition(int)	1
-C:/TouchGFXProjects/SpaceInvaders/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:53:6:void GameScreenView::updateADCValue(int)	1
-C:/TouchGFXProjects/SpaceInvaders/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:58:6:void GameScreenView::spawnBullet()	3
-C:/TouchGFXProjects/SpaceInvaders/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:176:6:bool GameScreenView::bulletCollidesWithAlien(const touchgfx::Image&, const touchgfx::Image&)	4
-C:/TouchGFXProjects/SpaceInvaders/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:75:6:virtual void GameScreenView::handleTickEvent()	22
-C:/TouchGFXProjects/SpaceInvaders/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:9:6:virtual void GameScreenView::setupScreen()	4
+C:/TouchGFXProjects/SpaceInvaders/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:7:1:GameScreenView::GameScreenView()	5
+C:/TouchGFXProjects/SpaceInvaders/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:60:6:void GameScreenView::updatePlayerPosition(int)	1
+C:/TouchGFXProjects/SpaceInvaders/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:64:6:void GameScreenView::updateADCValue(int)	1
+C:/TouchGFXProjects/SpaceInvaders/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:69:6:void GameScreenView::spawnBullet()	3
+C:/TouchGFXProjects/SpaceInvaders/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:221:6:bool GameScreenView::bulletCollidesWithAlien(const touchgfx::Image&, const touchgfx::Image&)	4
+C:/TouchGFXProjects/SpaceInvaders/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:238:10:uint32_t GameScreenView::getRandom()	2
+C:/TouchGFXProjects/SpaceInvaders/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:246:10:uint32_t GameScreenView::getRandomInRange(uint32_t, uint32_t)	2
+C:/TouchGFXProjects/SpaceInvaders/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:252:6:void GameScreenView::spawnEnemyBullet(int, int)	3
+C:/TouchGFXProjects/SpaceInvaders/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:86:6:virtual void GameScreenView::handleTickEvent()	27
+C:/TouchGFXProjects/SpaceInvaders/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:12:6:virtual void GameScreenView::setupScreen()	5

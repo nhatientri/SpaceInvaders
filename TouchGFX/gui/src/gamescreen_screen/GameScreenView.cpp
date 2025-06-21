@@ -1,5 +1,8 @@
 #include <gui/gamescreen_screen/GameScreenView.hpp>
 #include <images/BitmapDatabase.hpp>
+#include "main.h"
+
+extern "C" RNG_HandleTypeDef hrng;
 
 GameScreenView::GameScreenView()
 {
@@ -33,12 +36,21 @@ void GameScreenView::setupScreen()
         }
     }
 
+    for (int i = 0; i < MAX_ENEMY_BULLETS; ++i)
+    {
+        enemyBullets[i].setBitmap(Bitmap(BITMAP_BULLET_ID));
+        enemyBullets[i].setVisible(false);
+        add(enemyBullets[i]);
+    }
     // SCORE
     Unicode::snprintf(scoreTextBuffer, sizeof(scoreTextBuffer), "%d", score);
     Unicode::snprintf(highScoreTextBuffer, sizeof(highScoreTextBuffer), "%d", highScore);
 
     scoreText.invalidate();
     highScoreText.invalidate();
+
+
+
 }
 
 void GameScreenView::tearDownScreen()
@@ -171,6 +183,40 @@ void GameScreenView::handleTickEvent()
         enemyMoveDir = static_cast<Direction>((enemyMoveDir + 1) % 4);  // xoay chiều
     }
 
+    // Chọn alien ngẫu nhiên
+    int randRow = getRandomInRange(0, ROWS - 1);
+    int randCol = getRandomInRange(0, COLS - 1);
+
+    // Chỉ cho alien đang sống bắn
+    if (enemies[randRow][randCol].isVisible())
+    {
+        // Tỷ lệ 1/20 (hoặc tùy chỉnh)
+        if (getRandomInRange(0, 19) == 0)
+        {
+            int bulletX = enemies[randRow][randCol].getX() + enemies[randRow][randCol].getWidth() / 2;
+            int bulletY = enemies[randRow][randCol].getY() + enemies[randRow][randCol].getHeight();
+
+            spawnEnemyBullet(bulletX, bulletY);
+        }
+    }
+
+    for (int i = 0; i < MAX_ENEMY_BULLETS; ++i)
+    {
+        if (enemyBullets[i].isVisible())
+        {
+            int newY = enemyBullets[i].getY() + 4;
+            if (newY > 320)
+            {
+                enemyBullets[i].setVisible(false);
+            }
+            else
+            {
+                enemyBullets[i].moveTo(enemyBullets[i].getX(), newY);
+                enemyBullets[i].invalidate();
+            }
+        }
+    }
+
 }
 
 bool GameScreenView::bulletCollidesWithAlien(const Image& bullet, const Image& alien)
@@ -189,3 +235,31 @@ bool GameScreenView::bulletCollidesWithAlien(const Image& bullet, const Image& a
 }
 
 int GameScreenView::highScore = 0;
+
+uint32_t GameScreenView::getRandom()
+{
+    uint32_t val;
+    if (HAL_RNG_GenerateRandomNumber(&hrng, &val) == HAL_OK)
+        return val;
+    return 42;  // fallback
+}
+
+uint32_t GameScreenView::getRandomInRange(uint32_t min, uint32_t max)
+{
+    if (max <= min) return min;
+    return getRandom() % (max - min + 1) + min;
+}
+
+void GameScreenView::spawnEnemyBullet(int x, int y)
+{
+    for (int i = 0; i < MAX_ENEMY_BULLETS; ++i)
+    {
+        if (!enemyBullets[i].isVisible())
+        {
+            enemyBullets[i].setXY(x, y);
+            enemyBullets[i].setVisible(true);
+            enemyBullets[i].invalidate();
+            break;
+        }
+    }
+}

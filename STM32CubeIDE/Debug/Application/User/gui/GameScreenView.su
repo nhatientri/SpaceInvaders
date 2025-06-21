@@ -12,17 +12,20 @@
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:703:18:virtual void touchgfx::Drawable::setupDrawChain(const touchgfx::Rect&, touchgfx::Drawable**)	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:104:18:virtual void touchgfx::Screen::afterTransition()	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	0	static
-C:/TouchGFXProjects/SpaceInvaders/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:44:6:virtual void GameScreenView::tearDownScreen()	0	static
+C:/TouchGFXProjects/SpaceInvaders/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:55:6:virtual void GameScreenView::tearDownScreen()	0	static
 ../../TouchGFX/gui/include/gui/gamescreen_screen/GameScreenView.hpp:13:13:GameScreenView::~GameScreenView()	16	static
 ../../TouchGFX/gui/include/gui/gamescreen_screen/GameScreenView.hpp:13:13:virtual GameScreenView::~GameScreenView()	8	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:121:18:virtual void touchgfx::Drawable::invalidateContent() const	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:45:18:virtual void touchgfx::Widget::getLastChild(int16_t, int16_t, touchgfx::Drawable**)	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:343:10:void touchgfx::Drawable::setXY(int16_t, int16_t)	16	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:50:5:touchgfx::Image::Image(const touchgfx::Bitmap&)	8	static
-C:/TouchGFXProjects/SpaceInvaders/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:4:1:GameScreenView::GameScreenView()	32	static
-C:/TouchGFXProjects/SpaceInvaders/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:49:6:void GameScreenView::updatePlayerPosition(int)	8	static
-C:/TouchGFXProjects/SpaceInvaders/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:53:6:void GameScreenView::updateADCValue(int)	8	static
-C:/TouchGFXProjects/SpaceInvaders/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:58:6:void GameScreenView::spawnBullet()	16	static
-C:/TouchGFXProjects/SpaceInvaders/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:176:6:bool GameScreenView::bulletCollidesWithAlien(const touchgfx::Image&, const touchgfx::Image&)	12	static
-C:/TouchGFXProjects/SpaceInvaders/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:75:6:virtual void GameScreenView::handleTickEvent()	48	static
-C:/TouchGFXProjects/SpaceInvaders/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:9:6:virtual void GameScreenView::setupScreen()	56	static
+C:/TouchGFXProjects/SpaceInvaders/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:7:1:GameScreenView::GameScreenView()	32	static
+C:/TouchGFXProjects/SpaceInvaders/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:60:6:void GameScreenView::updatePlayerPosition(int)	8	static
+C:/TouchGFXProjects/SpaceInvaders/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:64:6:void GameScreenView::updateADCValue(int)	8	static
+C:/TouchGFXProjects/SpaceInvaders/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:69:6:void GameScreenView::spawnBullet()	16	static
+C:/TouchGFXProjects/SpaceInvaders/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:221:6:bool GameScreenView::bulletCollidesWithAlien(const touchgfx::Image&, const touchgfx::Image&)	12	static
+C:/TouchGFXProjects/SpaceInvaders/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:238:10:uint32_t GameScreenView::getRandom()	16	static
+C:/TouchGFXProjects/SpaceInvaders/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:246:10:uint32_t GameScreenView::getRandomInRange(uint32_t, uint32_t)	16	static
+C:/TouchGFXProjects/SpaceInvaders/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:252:6:void GameScreenView::spawnEnemyBullet(int, int)	24	static
+C:/TouchGFXProjects/SpaceInvaders/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:86:6:virtual void GameScreenView::handleTickEvent()	48	static
+C:/TouchGFXProjects/SpaceInvaders/TouchGFX/gui/src/gamescreen_screen/GameScreenView.cpp:12:6:virtual void GameScreenView::setupScreen()	56	static
