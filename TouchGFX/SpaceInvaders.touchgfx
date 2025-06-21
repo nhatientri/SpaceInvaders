@@ -75,12 +75,17 @@
           },
           {
             "Type": "TextArea",
-            "Name": "score",
-            "X": 23,
-            "Width": 82,
-            "Height": 48,
+            "Name": "scoreText",
+            "X": 27,
+            "Width": 35,
+            "Height": 24,
             "TextId": "score",
             "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
             "AutoSize": true,
             "Wildcard1": {
               "TextId": "scoreBuffer",
@@ -90,12 +95,18 @@
           },
           {
             "Type": "TextArea",
-            "Name": "highScore",
-            "X": 120,
-            "Width": 114,
-            "Height": 48,
+            "Name": "highScoreText",
+            "X": 165,
+            "Width": 52,
+            "Height": 24,
             "TextId": "highScore",
             "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true,
             "Wildcard1": {
               "TextId": "highScoreBuffer",
               "UseBuffer": true,

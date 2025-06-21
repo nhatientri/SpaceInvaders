@@ -24,22 +24,23 @@ GameScreenViewBase::GameScreenViewBase()
     textArea1.setTypedText(touchgfx::TypedText(T_ADCTEXT));
     add(textArea1);
 
-    score.setXY(23, 0);
-    score.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
-    score.setLinespacing(0);
-    Unicode::snprintf(scoreBuffer, SCORE_SIZE, "%s", touchgfx::TypedText(T_SCOREBUFFER).getText());
-    score.setWildcard(scoreBuffer);
-    score.resizeToCurrentText();
-    score.setTypedText(touchgfx::TypedText(T_SCORE));
-    add(score);
+    scoreText.setXY(27, 0);
+    scoreText.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    scoreText.setLinespacing(0);
+    Unicode::snprintf(scoreTextBuffer, SCORETEXT_SIZE, "%s", touchgfx::TypedText(T_SCOREBUFFER).getText());
+    scoreText.setWildcard(scoreTextBuffer);
+    scoreText.resizeToCurrentText();
+    scoreText.setTypedText(touchgfx::TypedText(T_SCORE));
+    add(scoreText);
 
-    highScore.setPosition(120, 0, 114, 48);
-    highScore.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
-    highScore.setLinespacing(0);
-    Unicode::snprintf(highScoreBuffer, HIGHSCORE_SIZE, "%s", touchgfx::TypedText(T_HIGHSCOREBUFFER).getText());
-    highScore.setWildcard(highScoreBuffer);
-    highScore.setTypedText(touchgfx::TypedText(T_HIGHSCORE));
-    add(highScore);
+    highScoreText.setXY(165, 0);
+    highScoreText.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    highScoreText.setLinespacing(0);
+    Unicode::snprintf(highScoreTextBuffer, HIGHSCORETEXT_SIZE, "%s", touchgfx::TypedText(T_HIGHSCOREBUFFER).getText());
+    highScoreText.setWildcard(highScoreTextBuffer);
+    highScoreText.resizeToCurrentText();
+    highScoreText.setTypedText(touchgfx::TypedText(T_HIGHSCORE));
+    add(highScoreText);
 }
 
 GameScreenViewBase::~GameScreenViewBase()

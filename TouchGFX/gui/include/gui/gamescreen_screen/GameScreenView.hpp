@@ -40,6 +40,8 @@ protected:
     int stepDelay = 10;       // delay giữa các bước (tick)
 
     int tickCounter = 0;      // đếm tick để điều tốc
+    int score = 0;
+    static int highScore;
 
 };
 

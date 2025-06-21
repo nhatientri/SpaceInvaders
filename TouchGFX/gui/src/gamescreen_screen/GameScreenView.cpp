@@ -33,6 +33,12 @@ void GameScreenView::setupScreen()
         }
     }
 
+    // SCORE
+    Unicode::snprintf(scoreTextBuffer, sizeof(scoreTextBuffer), "%d", score);
+    Unicode::snprintf(highScoreTextBuffer, sizeof(highScoreTextBuffer), "%d", highScore);
+
+    scoreText.invalidate();
+    highScoreText.invalidate();
 }
 
 void GameScreenView::tearDownScreen()
@@ -105,12 +111,33 @@ void GameScreenView::handleTickEvent()
                     enemies[row][col].invalidate();
 
                     // (Tùy chọn) tăng điểm ở đây
+                    if (enemyBitmaps[row] == BITMAP_RED_ID)
+                    {
+                    	score += 20;
+                    }
+                    else if (enemyBitmaps[row] == BITMAP_GREEN_ID)
+                    {
+                    	score += 10;
+                    }
+                    else
+                    {
+                    	score += 5;
+                    }
 
-                    goto doneCheckingThisBullet;  // thoát vòng lặp 3 tầng
+                	Unicode::snprintf(scoreTextBuffer, sizeof(scoreTextBuffer), "%d", score);
+                	scoreText.invalidate();
+
+                    if (score > highScore)
+                    {
+                    	highScore = score;
+                    	Unicode::snprintf(highScoreTextBuffer, sizeof(highScoreTextBuffer), "%d", highScore);
+                    	highScoreText.invalidate();
+                    }
+                    goto nextBullet;  // thoát vòng lặp 3 tầng
                 }
             }
         }
-    doneCheckingThisBullet:;
+    nextBullet:;
     }
 
     tickCounter++;
@@ -161,3 +188,4 @@ bool GameScreenView::bulletCollidesWithAlien(const Image& bullet, const Image& a
     return !(bx + bw < ax || bx > ax + aw || by + bh < ay || by > ay + ah);
 }
 
+int GameScreenView::highScore = 0;

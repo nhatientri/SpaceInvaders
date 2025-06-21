@@ -5,16 +5,16 @@
   </Languages>
   <Texts>
     <TextGroup Id="Score">
-      <Text Id="highScore" Alignment="Center" TypographyId="Default">
+      <Text Id="highScore" Alignment="Center" TypographyId="Small">
         <Translation Language="GB">HI-SCORE&#10;&lt;value&gt;</Translation>
       </Text>
-      <Text Id="highScoreBuffer" Alignment="Left" TypographyId="Default">
+      <Text Id="highScoreBuffer" Alignment="Center" TypographyId="Small">
         <Translation Language="GB">0</Translation>
       </Text>
-      <Text Id="scoreBuffer" Alignment="Left" TypographyId="Default">
+      <Text Id="scoreBuffer" Alignment="Center" TypographyId="Small">
         <Translation Language="GB">0</Translation>
       </Text>
-      <Text Id="score" Alignment="Center" TypographyId="Default">
+      <Text Id="score" Alignment="Center" TypographyId="Small">
         <Translation Language="GB">SCORE&#10;&lt;value&gt;</Translation>
       </Text>
     </TextGroup>
@@ -34,7 +34,7 @@
     <Typography Id="Default" Font="verdana.ttf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
     <Typography Id="Large" Font="verdana.ttf" Size="40" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
     <Typography Id="Small" Font="verdana.ttf" Size="10" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
-    <Typography Id="Typography_00" Font="verdana.ttf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
-    <Typography Id="counter" Font="verdana.ttf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacters="-,+" WildcardCharacterRanges="0-9" />
+    <Typography Id="counter" Font="verdana.ttf" Size="10" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacters="-,+" WildcardCharacterRanges="0-9" />
+    <Typography Id="scoreFont" Font="verdana.ttf" Size="10" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0-9" />
   </Typographies>
 </TextDatabase>
