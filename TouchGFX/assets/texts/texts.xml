@@ -23,7 +23,7 @@
         <Translation Language="GB">adc value: &lt;value&gt;</Translation>
       </Text>
       <Text Id="adcBuffer" Alignment="Left" TypographyId="Default">
-        <Translation Language="GB">0</Translation>
+        <Translation Language="GB"></Translation>
       </Text>
       <Text Id="__SingleUse_27QB" Alignment="Center" TypographyId="Default">
         <Translation Language="GB">Play</Translation>

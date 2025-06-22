@@ -12,7 +12,17 @@ void Model::tick() {
     HAL_ADC_Start(&hadc1);
     if (HAL_ADC_PollForConversion(&hadc1, 10) == HAL_OK) {
         uint32_t adc_value = HAL_ADC_GetValue(&hadc1);
-        int xPos = 30 + (adc_value * (210 - 20)) / 4095;
+        // Điều kiện logic tùy chỉnh
+        int xPos;
+        if (adc_value <= 5) {
+            xPos = -3; // tốc độ di chuyển sang trái
+        }
+        else if (adc_value > 15) {
+            xPos = 3; // tốc độ di chuyển sang phải
+        }
+        else {
+        	xPos = 0;
+        }
         modelListener->updatePlayerX(xPos);
         modelListener->updateADCValue(adc_value);
     }

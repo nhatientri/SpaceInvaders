@@ -1,7 +1,7 @@
-TouchGFX/build/STM32F429IDISCO/TouchGFX/gui/src/screen1_screen/Screen1Presenter.o: \
- TouchGFX/gui/src/screen1_screen/Screen1Presenter.cpp \
- TouchGFX/gui/include/gui/screen1_screen/Screen1View.hpp \
- TouchGFX/generated/gui_generated/include/gui_generated/screen1_screen/Screen1ViewBase.hpp \
+TouchGFX/build/STM32F429IDISCO/TouchGFX/gui/src/startscreen_screen/StartScreenPresenter.o: \
+ TouchGFX/gui/src/startscreen_screen/StartScreenPresenter.cpp \
+ TouchGFX/gui/include/gui/startscreen_screen/StartScreenView.hpp \
+ TouchGFX/generated/gui_generated/include/gui_generated/startscreen_screen/StartScreenViewBase.hpp \
  TouchGFX/gui/include/gui/common/FrontendApplication.hpp \
  TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp \
  Middlewares/ST/touchgfx/framework/include/mvp/MVPApplication.hpp \
@@ -44,7 +44,7 @@ TouchGFX/build/STM32F429IDISCO/TouchGFX/gui/src/screen1_screen/Screen1Presenter.
  Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/Transition.hpp \
  TouchGFX/gui/include/gui/model/Model.hpp \
  Middlewares/ST/touchgfx/framework/include/mvp/View.hpp \
- TouchGFX/gui/include/gui/screen1_screen/Screen1Presenter.hpp \
+ TouchGFX/gui/include/gui/startscreen_screen/StartScreenPresenter.hpp \
  TouchGFX/gui/include/gui/model/ModelListener.hpp \
  Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp \
  Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp \
@@ -53,9 +53,9 @@ TouchGFX/build/STM32F429IDISCO/TouchGFX/gui/src/screen1_screen/Screen1Presenter.
  Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp \
  Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp
 
-TouchGFX/gui/include/gui/screen1_screen/Screen1View.hpp:
+TouchGFX/gui/include/gui/startscreen_screen/StartScreenView.hpp:
 
-TouchGFX/generated/gui_generated/include/gui_generated/screen1_screen/Screen1ViewBase.hpp:
+TouchGFX/generated/gui_generated/include/gui_generated/startscreen_screen/StartScreenViewBase.hpp:
 
 TouchGFX/gui/include/gui/common/FrontendApplication.hpp:
 
@@ -141,7 +141,7 @@ TouchGFX/gui/include/gui/model/Model.hpp:
 
 Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:
 
-TouchGFX/gui/include/gui/screen1_screen/Screen1Presenter.hpp:
+TouchGFX/gui/include/gui/startscreen_screen/StartScreenPresenter.hpp:
 
 TouchGFX/gui/include/gui/model/ModelListener.hpp:
 

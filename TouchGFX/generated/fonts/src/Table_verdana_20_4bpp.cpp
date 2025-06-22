@@ -5,18 +5,17 @@
 FONT_TABLE_LOCATION_FLASH_PRAGMA
 KEEP extern const touchgfx::GlyphNode glyphs_verdana_20_4bpp[] FONT_TABLE_LOCATION_FLASH_ATTRIBUTE = {
     {     0, 0x0020,   0,   0,   0,   0,   7,   0,   0, 0x00 },
-    {     0, 0x0030,  11,  14,  14,   1,  13,   0,   0, 0x00 },
-    {    84, 0x003A,   3,  11,  11,   3,   9,   0,   0, 0x00 },
-    {   106, 0x003F,   9,  14,  14,   1,  11,   0,   0, 0x00 },
-    {   176, 0x0050,  11,  14,  14,   1,  12,   0,   0, 0x00 },
-    {   260, 0x0061,  10,  11,  11,   1,  12,   0,   0, 0x00 },
-    {   315, 0x0063,   9,  11,  11,   1,  10,   0,   0, 0x00 },
-    {   370, 0x0064,  10,  15,  15,   1,  12,   0,   0, 0x00 },
-    {   445, 0x0065,  10,  11,  11,   1,  12,   0,   0, 0x00 },
-    {   500, 0x006C,   3,  15,  15,   1,   5,   0,   0, 0x00 },
-    {   530, 0x0075,  10,  11,  11,   1,  13,   0,   0, 0x00 },
-    {   585, 0x0076,  12,  11,  11,   0,  12,   0,   0, 0x00 },
-    {   651, 0x0079,  12,  15,  11,   0,  12,   0,   0, 0x00 }
+    {     0, 0x003A,   3,  11,  11,   3,   9,   0,   0, 0x00 },
+    {    22, 0x003F,   9,  14,  14,   1,  11,   0,   0, 0x00 },
+    {    92, 0x0050,  11,  14,  14,   1,  12,   0,   0, 0x00 },
+    {   176, 0x0061,  10,  11,  11,   1,  12,   0,   0, 0x00 },
+    {   231, 0x0063,   9,  11,  11,   1,  10,   0,   0, 0x00 },
+    {   286, 0x0064,  10,  15,  15,   1,  12,   0,   0, 0x00 },
+    {   361, 0x0065,  10,  11,  11,   1,  12,   0,   0, 0x00 },
+    {   416, 0x006C,   3,  15,  15,   1,   5,   0,   0, 0x00 },
+    {   446, 0x0075,  10,  11,  11,   1,  13,   0,   0, 0x00 },
+    {   501, 0x0076,  12,  11,  11,   0,  12,   0,   0, 0x00 },
+    {   567, 0x0079,  12,  15,  11,   0,  12,   0,   0, 0x00 }
 };
 
 // verdana_20_4bpp
@@ -34,6 +33,6 @@ touchgfx::GeneratedFont& getFont_verdana_20_4bpp();
 
 touchgfx::GeneratedFont& getFont_verdana_20_4bpp()
 {
-    static touchgfx::GeneratedFont verdana_20_4bpp(glyphs_verdana_20_4bpp, 13, 24, 20, 0, 0, 4, 1, 0, 0, unicodes_verdana_20_4bpp, kerning_verdana_20_4bpp, 63, 0, 0, 0);
+    static touchgfx::GeneratedFont verdana_20_4bpp(glyphs_verdana_20_4bpp, 12, 24, 20, 0, 0, 4, 1, 0, 0, unicodes_verdana_20_4bpp, kerning_verdana_20_4bpp, 63, 0, 0, 0);
     return verdana_20_4bpp;
 }

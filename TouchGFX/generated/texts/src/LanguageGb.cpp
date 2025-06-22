@@ -15,6 +15,6 @@ KEEP extern const uint32_t indicesGb[] TEXT_LOCATION_FLASH_ATTRIBUTE = {
     29, // T_SCOREBUFFER: "0"
     16, // T_SCORE: "SCORE\n<>"
     0,  // T_ADCTEXT: "adc value: <>"
-    29, // T_ADCBUFFER: "0"
+    12, // T_ADCBUFFER: ""
     24  // T___SINGLEUSE_27QB: "Play"
 };

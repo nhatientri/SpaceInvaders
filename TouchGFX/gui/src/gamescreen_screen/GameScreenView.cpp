@@ -42,6 +42,16 @@ void GameScreenView::setupScreen()
         enemyBullets[i].setVisible(false);
         add(enemyBullets[i]);
     }
+
+    // Display 3 lives on screen
+    for (int i = 0; i < MAX_LIVES; ++i)
+    {
+    	lifeIcons[i].setBitmap(Bitmap(BITMAP_PLAYER_ID)); // Replace with your player ship bitmap
+    	lifeIcons[i].setXY(10 + i * 35, 300); // Adjust spacing and Y position to suit your layout
+    	lifeIcons[i].setVisible(true);
+        add(lifeIcons[i]);
+    }
+
     // SCORE
     Unicode::snprintf(scoreTextBuffer, sizeof(scoreTextBuffer), "%d", score);
     Unicode::snprintf(highScoreTextBuffer, sizeof(highScoreTextBuffer), "%d", highScore);
@@ -59,7 +69,11 @@ void GameScreenView::tearDownScreen()
 }
 
 void GameScreenView::updatePlayerPosition(int x) {
-    player.moveTo(x - player.getWidth() / 2, player.getY());
+	int playerX = player.getX();
+	playerX += x;
+    if (playerX < 0) playerX = 0;
+    if (playerX > 210) playerX = 210;
+    player.moveTo(playerX, player.getY());
 }
 
 void GameScreenView::updateADCValue(int value) {
@@ -114,7 +128,7 @@ void GameScreenView::handleTickEvent()
             {
                 if (!enemies[row][col].isVisible()) continue;
 
-                if (bulletCollidesWithAlien(bullets[b], enemies[row][col]))
+                if (bulletCollides(bullets[b], enemies[row][col]))
                 {
                     bullets[b].setVisible(false);
                     enemies[row][col].setVisible(false);
@@ -204,11 +218,30 @@ void GameScreenView::handleTickEvent()
     {
         if (enemyBullets[i].isVisible())
         {
-            int newY = enemyBullets[i].getY() + 4;
+            int newY = enemyBullets[i].getY() + 10;
             if (newY > 320)
             {
                 enemyBullets[i].setVisible(false);
             }
+            if (bulletCollides(enemyBullets[i], player))
+            {
+                enemyBullets[i].setVisible(false);
+                enemyBullets[i].invalidate();
+
+                if (lives > 0)
+                {
+                    lives--;
+                    lifeIcons[lives].setVisible(false);  // Hide the last visible life icon
+                    lifeIcons[lives].invalidate();
+                }
+
+                if (lives == 0 && !gameOverTriggered)
+                {
+                    gameOverTriggered = true;
+                    // TODO: Show Game Over UI, stop game loop, etc.
+                }
+            }
+
             else
             {
                 enemyBullets[i].moveTo(enemyBullets[i].getX(), newY);
@@ -219,7 +252,7 @@ void GameScreenView::handleTickEvent()
 
 }
 
-bool GameScreenView::bulletCollidesWithAlien(const Image& bullet, const Image& alien)
+bool GameScreenView::bulletCollides(const Image& bullet, const Image& alien)
 {
     int bx = bullet.getX();
     int by = bullet.getY();

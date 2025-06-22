@@ -17,20 +17,23 @@ public:
     void updateADCValue(int value);
     void spawnBullet();  // Tạo viên đạn mới
     void spawnEnemyBullet(int x, int y);
-    bool bulletCollidesWithAlien(const Image& bullet, const Image& alien);
+    bool bulletCollides(const Image& bullet, const Image& alien);
     virtual void handleTickEvent() override;
     uint32_t getRandom();
     uint32_t getRandomInRange(uint32_t min, uint32_t max);
 
 protected:
     static const int MAX_BULLETS = 9;
-    Image bullets[MAX_BULLETS];
+    static const int MAX_ENEMY_BULLETS = 20;
     static const int ROWS = 3;
     static const int COLS = 6;
-	static const int MAX_ENEMY_BULLETS = 5;
-	Image enemyBullets[MAX_ENEMY_BULLETS];
+    static const int MAX_LIVES = 3;
 
+    Image bullets[MAX_BULLETS];
+    Image enemyBullets[MAX_ENEMY_BULLETS];
     Image enemies[ROWS][COLS];
+    Image lifeIcons[MAX_LIVES];
+
     BitmapId enemyBitmaps[ROWS] = {
         BITMAP_RED_ID,
         BITMAP_GREEN_ID,
@@ -41,14 +44,17 @@ protected:
     Direction enemyMoveDir = RIGHT;
 
     int moveCounter = 0;
-    const int maxSteps = 6;  // số bước mỗi cạnh vuông
-    int stepSize = 3;         // số pixel mỗi bước
-    int stepDelay = 10;       // delay giữa các bước (tick)
+    const int maxSteps = 6;
+    int stepSize = 3;
+    int stepDelay = 10;
 
-    int tickCounter = 0;      // đếm tick để điều tốc
+    int tickCounter = 0;
     int score = 0;
     static int highScore;
 
+    int lives = MAX_LIVES;
+    bool gameOverTriggered = false;
 };
+
 
 #endif // GAMESCREENVIEW_HPP

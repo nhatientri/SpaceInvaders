@@ -1,5 +1,5 @@
-TouchGFX/build/STM32F429IDISCO/TouchGFX/generated/images/src/image_extra.o: \
- TouchGFX/generated/images/src/image_extra.cpp \
+TouchGFX/build/STM32F429IDISCO/TouchGFX/generated/images/src/image_bullet.o: \
+ TouchGFX/generated/images/src/image_bullet.cpp \
  Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Config.hpp
 
 Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Config.hpp:

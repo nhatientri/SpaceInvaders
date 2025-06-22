@@ -16,7 +16,7 @@ GameScreenViewBase::GameScreenViewBase()
     player.setBitmap(touchgfx::Bitmap(BITMAP_PLAYER_ID));
     add(player);
 
-    textArea1.setPosition(0, 291, 240, 29);
+    textArea1.setPosition(0, 290, 240, 30);
     textArea1.setColor(touchgfx::Color::getColorFromRGB(255, 0, 34));
     textArea1.setLinespacing(0);
     Unicode::snprintf(textArea1Buffer, TEXTAREA1_SIZE, "%s", touchgfx::TypedText(T_ADCBUFFER).getText());

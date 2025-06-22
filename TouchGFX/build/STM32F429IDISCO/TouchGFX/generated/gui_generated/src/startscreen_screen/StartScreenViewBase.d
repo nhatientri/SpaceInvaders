@@ -1,7 +1,6 @@
-TouchGFX/build/STM32F429IDISCO/TouchGFX/gui/src/screen2_screen/Screen2View.o: \
- TouchGFX/gui/src/screen2_screen/Screen2View.cpp \
- TouchGFX/gui/include/gui/screen2_screen/Screen2View.hpp \
- TouchGFX/generated/gui_generated/include/gui_generated/screen2_screen/Screen2ViewBase.hpp \
+TouchGFX/build/STM32F429IDISCO/TouchGFX/generated/gui_generated/src/startscreen_screen/StartScreenViewBase.o: \
+ TouchGFX/generated/gui_generated/src/startscreen_screen/StartScreenViewBase.cpp \
+ TouchGFX/generated/gui_generated/include/gui_generated/startscreen_screen/StartScreenViewBase.hpp \
  TouchGFX/gui/include/gui/common/FrontendApplication.hpp \
  TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp \
  Middlewares/ST/touchgfx/framework/include/mvp/MVPApplication.hpp \
@@ -44,14 +43,19 @@ TouchGFX/build/STM32F429IDISCO/TouchGFX/gui/src/screen2_screen/Screen2View.o: \
  Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/Transition.hpp \
  TouchGFX/gui/include/gui/model/Model.hpp \
  Middlewares/ST/touchgfx/framework/include/mvp/View.hpp \
- TouchGFX/gui/include/gui/screen2_screen/Screen2Presenter.hpp \
+ TouchGFX/gui/include/gui/startscreen_screen/StartScreenPresenter.hpp \
  TouchGFX/gui/include/gui/model/ModelListener.hpp \
  Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp \
- Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp
+ Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp \
+ Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp \
+ Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp \
+ Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp \
+ Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp \
+ Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp \
+ TouchGFX/generated/images/include/images/BitmapDatabase.hpp \
+ TouchGFX/generated/texts/include/texts/TextKeysAndLanguages.hpp
 
-TouchGFX/gui/include/gui/screen2_screen/Screen2View.hpp:
-
-TouchGFX/generated/gui_generated/include/gui_generated/screen2_screen/Screen2ViewBase.hpp:
+TouchGFX/generated/gui_generated/include/gui_generated/startscreen_screen/StartScreenViewBase.hpp:
 
 TouchGFX/gui/include/gui/common/FrontendApplication.hpp:
 
@@ -137,10 +141,24 @@ TouchGFX/gui/include/gui/model/Model.hpp:
 
 Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:
 
-TouchGFX/gui/include/gui/screen2_screen/Screen2Presenter.hpp:
+TouchGFX/gui/include/gui/startscreen_screen/StartScreenPresenter.hpp:
 
 TouchGFX/gui/include/gui/model/ModelListener.hpp:
 
 Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:
 
-Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:
+Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp:
+
+Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:
+
+Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp:
+
+Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp:
+
+Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:
+
+Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp:
+
+TouchGFX/generated/images/include/images/BitmapDatabase.hpp:
+
+TouchGFX/generated/texts/include/texts/TextKeysAndLanguages.hpp:

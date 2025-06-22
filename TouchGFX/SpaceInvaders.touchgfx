@@ -58,9 +58,9 @@
           {
             "Type": "TextArea",
             "Name": "textArea1",
-            "Y": 291,
+            "Y": 290,
             "Width": 240,
-            "Height": 29,
+            "Height": 30,
             "TextId": "adcText",
             "TextRotation": "0",
             "Color": {

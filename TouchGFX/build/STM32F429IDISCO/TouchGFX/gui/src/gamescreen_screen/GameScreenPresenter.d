@@ -1,6 +1,7 @@
-TouchGFX/build/STM32F429IDISCO/TouchGFX/generated/gui_generated/src/screen2_screen/Screen2ViewBase.o: \
- TouchGFX/generated/gui_generated/src/screen2_screen/Screen2ViewBase.cpp \
- TouchGFX/generated/gui_generated/include/gui_generated/screen2_screen/Screen2ViewBase.hpp \
+TouchGFX/build/STM32F429IDISCO/TouchGFX/gui/src/gamescreen_screen/GameScreenPresenter.o: \
+ TouchGFX/gui/src/gamescreen_screen/GameScreenPresenter.cpp \
+ TouchGFX/gui/include/gui/gamescreen_screen/GameScreenView.hpp \
+ TouchGFX/generated/gui_generated/include/gui_generated/gamescreen_screen/GameScreenViewBase.hpp \
  TouchGFX/gui/include/gui/common/FrontendApplication.hpp \
  TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp \
  Middlewares/ST/touchgfx/framework/include/mvp/MVPApplication.hpp \
@@ -43,14 +44,19 @@ TouchGFX/build/STM32F429IDISCO/TouchGFX/generated/gui_generated/src/screen2_scre
  Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/Transition.hpp \
  TouchGFX/gui/include/gui/model/Model.hpp \
  Middlewares/ST/touchgfx/framework/include/mvp/View.hpp \
- TouchGFX/gui/include/gui/screen2_screen/Screen2Presenter.hpp \
+ TouchGFX/gui/include/gui/gamescreen_screen/GameScreenPresenter.hpp \
  TouchGFX/gui/include/gui/model/ModelListener.hpp \
  Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp \
  Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp \
- Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp \
+ Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp \
+ Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp \
+ Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp \
+ Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp \
  TouchGFX/generated/images/include/images/BitmapDatabase.hpp
 
-TouchGFX/generated/gui_generated/include/gui_generated/screen2_screen/Screen2ViewBase.hpp:
+TouchGFX/gui/include/gui/gamescreen_screen/GameScreenView.hpp:
+
+TouchGFX/generated/gui_generated/include/gui_generated/gamescreen_screen/GameScreenViewBase.hpp:
 
 TouchGFX/gui/include/gui/common/FrontendApplication.hpp:
 
@@ -136,7 +142,7 @@ TouchGFX/gui/include/gui/model/Model.hpp:
 
 Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:
 
-TouchGFX/gui/include/gui/screen2_screen/Screen2Presenter.hpp:
+TouchGFX/gui/include/gui/gamescreen_screen/GameScreenPresenter.hpp:
 
 TouchGFX/gui/include/gui/model/ModelListener.hpp:
 
@@ -144,6 +150,12 @@ Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:
 
 Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:
 
-Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp:
+Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:
+
+Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:
+
+Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:
+
+Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp:
 
 TouchGFX/generated/images/include/images/BitmapDatabase.hpp:
