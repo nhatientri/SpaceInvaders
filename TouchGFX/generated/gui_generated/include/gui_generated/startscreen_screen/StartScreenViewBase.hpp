@@ -9,7 +9,7 @@
 #include <gui/startscreen_screen/StartScreenPresenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/widgets/ButtonWithLabel.hpp>
-#include <touchgfx/widgets/ScalableImage.hpp>
+#include <touchgfx/widgets/Image.hpp>
 
 class StartScreenViewBase : public touchgfx::View<StartScreenPresenter>
 {
@@ -28,7 +28,7 @@ protected:
      */
     touchgfx::Box __background;
     touchgfx::ButtonWithLabel playButton;
-    touchgfx::ScalableImage startBackground;
+    touchgfx::Image startBackground;
 
 private:
 

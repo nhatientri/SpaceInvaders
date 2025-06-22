@@ -71,3 +71,16 @@ void FrontendApplicationBase::gotoGameScreenScreenSlideTransitionWestImpl()
 {
     touchgfx::makeTransition<GameScreenView, GameScreenPresenter, touchgfx::SlideTransition<WEST>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }
+
+// EndScreen
+
+void FrontendApplicationBase::gotoEndScreenScreenSlideTransitionEast()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoEndScreenScreenSlideTransitionEastImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoEndScreenScreenSlideTransitionEastImpl()
+{
+    touchgfx::makeTransition<EndScreenView, EndScreenPresenter, touchgfx::SlideTransition<EAST>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}

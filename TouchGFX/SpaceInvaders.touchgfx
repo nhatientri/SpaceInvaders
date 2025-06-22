@@ -7,11 +7,12 @@
           {
             "Type": "ButtonWithLabel",
             "Name": "playButton",
-            "Y": 227,
-            "Width": 240,
+            "X": 33,
+            "Y": 237,
+            "Width": 175,
             "Height": 50,
-            "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_50_medium_rounded_disabled.png",
-            "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_50_medium_rounded_action.png",
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_50_small_round_inactive.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_50_small_round_inactive.png",
             "TextId": "__SingleUse_27QB",
             "ReleasedColor": {
               "Red": 255,
@@ -23,15 +24,16 @@
               "Green": 255,
               "Blue": 255
             },
-            "TextRotation": "0"
+            "TextRotation": "0",
+            "Preset": "alternate_theme\\presets\\button\\regular\\height_50\\small_round_inactive.json"
           },
           {
-            "Type": "ScalableImage",
+            "Type": "Image",
             "Name": "startBackground",
+            "Y": -20,
             "Width": 240,
-            "Height": 320,
-            "Filename": "SpaceInvaderStart.png",
-            "ScalingAlgorithm": "Nearest-neighbor"
+            "Height": 360,
+            "RelativeFilename": "SpaceInvaderStart.png"
           }
         ],
         "Interactions": [
@@ -54,12 +56,12 @@
         "Name": "GameScreen",
         "Components": [
           {
-            "Type": "ScalableImage",
+            "Type": "Image",
             "Name": "gameBackground",
+            "Y": -20,
             "Width": 240,
-            "Height": 320,
-            "Filename": "SpaceInvaderGloomyBg.png",
-            "ScalingAlgorithm": "Nearest-neighbor"
+            "Height": 360,
+            "RelativeFilename": "SpaceInvaderGloomyBg.png"
           },
           {
             "Type": "Image",
@@ -109,9 +111,33 @@
               "UseBuffer": true,
               "BufferSize": 8
             }
+          },
+          {
+            "Type": "Button",
+            "Name": "surrenderButton",
+            "X": 207,
+            "Y": 290,
+            "Width": 20,
+            "Height": 20,
+            "Pressed": "surrender.png",
+            "Released": "surrender.png"
           }
         ],
-        "Interactions": []
+        "Interactions": [
+          {
+            "InteractionName": "Interaction1",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "surrenderButton"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "East",
+              "ActionComponent": "EndScreen"
+            }
+          }
+        ]
       },
       {
         "Name": "EndScreen",
@@ -119,20 +145,40 @@
           {
             "Type": "Button",
             "Name": "restartButton",
-            "Y": 215,
-            "Width": 240,
+            "X": 33,
+            "Y": 223,
+            "Width": 175,
             "Height": 50,
-            "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_50_medium_rounded_pressed.png",
-            "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_50_medium_rounded_normal.png",
-            "Preset": "alternate_theme\\presets\\button\\regular\\height_50\\medium_rounded_normal.json"
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_50_small_round_inactive.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_50_small_round_inactive.png",
+            "Preset": "alternate_theme\\presets\\button\\regular\\height_50\\small_round_inactive.json"
           },
           {
-            "Type": "ScalableImage",
+            "Type": "Image",
             "Name": "endBackground",
+            "Y": -20,
             "Width": 240,
-            "Height": 320,
-            "Filename": "SpaceInvaderGameOver.png",
-            "ScalingAlgorithm": "Nearest-neighbor"
+            "Height": 360,
+            "RelativeFilename": "SpaceInvaderGameOver.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "scoreText",
+            "X": 103,
+            "Y": 121,
+            "Width": 35,
+            "Height": 24,
+            "TextId": "score",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true,
+            "Wildcard1": {
+              "TextId": "scoreBuffer"
+            }
           }
         ],
         "Interactions": [

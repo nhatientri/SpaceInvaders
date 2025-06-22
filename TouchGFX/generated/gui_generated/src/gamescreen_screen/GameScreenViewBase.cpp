@@ -6,15 +6,15 @@
 #include <images/BitmapDatabase.hpp>
 #include <texts/TextKeysAndLanguages.hpp>
 
-GameScreenViewBase::GameScreenViewBase()
+GameScreenViewBase::GameScreenViewBase() :
+    buttonCallback(this, &GameScreenViewBase::buttonCallbackHandler)
 {
     __background.setPosition(0, 0, 240, 320);
     __background.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     add(__background);
 
+    gameBackground.setXY(0, -20);
     gameBackground.setBitmap(touchgfx::Bitmap(BITMAP_SPACEINVADERGLOOMYBG_ID));
-    gameBackground.setPosition(0, 0, 240, 320);
-    gameBackground.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
     add(gameBackground);
 
     player.setXY(105, 275);
@@ -38,6 +38,11 @@ GameScreenViewBase::GameScreenViewBase()
     highScoreText.resizeToCurrentText();
     highScoreText.setTypedText(touchgfx::TypedText(T_HIGHSCORE));
     add(highScoreText);
+
+    surrenderButton.setXY(207, 290);
+    surrenderButton.setBitmaps(touchgfx::Bitmap(BITMAP_SURRENDER_ID), touchgfx::Bitmap(BITMAP_SURRENDER_ID));
+    surrenderButton.setAction(buttonCallback);
+    add(surrenderButton);
 }
 
 GameScreenViewBase::~GameScreenViewBase()
@@ -48,4 +53,15 @@ GameScreenViewBase::~GameScreenViewBase()
 void GameScreenViewBase::setupScreen()
 {
 
+}
+
+void GameScreenViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
+{
+    if (&src == &surrenderButton)
+    {
+        //Interaction1
+        //When surrenderButton clicked change screen to EndScreen
+        //Go to EndScreen with screen transition towards East
+        application().gotoEndScreenScreenSlideTransitionEast();
+    }
 }

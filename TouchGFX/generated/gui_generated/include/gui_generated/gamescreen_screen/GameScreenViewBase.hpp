@@ -8,9 +8,9 @@
 #include <mvp/View.hpp>
 #include <gui/gamescreen_screen/GameScreenPresenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
-#include <touchgfx/widgets/ScalableImage.hpp>
 #include <touchgfx/widgets/Image.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
+#include <touchgfx/widgets/Button.hpp>
 
 class GameScreenViewBase : public touchgfx::View<GameScreenPresenter>
 {
@@ -28,10 +28,11 @@ protected:
      * Member Declarations
      */
     touchgfx::Box __background;
-    touchgfx::ScalableImage gameBackground;
+    touchgfx::Image gameBackground;
     touchgfx::Image player;
     touchgfx::TextAreaWithOneWildcard scoreText;
     touchgfx::TextAreaWithOneWildcard highScoreText;
+    touchgfx::Button surrenderButton;
 
     /*
      * Wildcard Buffers
@@ -42,6 +43,16 @@ protected:
     touchgfx::Unicode::UnicodeChar highScoreTextBuffer[HIGHSCORETEXT_SIZE];
 
 private:
+
+    /*
+     * Callback Declarations
+     */
+    touchgfx::Callback<GameScreenViewBase, const touchgfx::AbstractButton&> buttonCallback;
+
+    /*
+     * Callback Handler Declarations
+     */
+    void buttonCallbackHandler(const touchgfx::AbstractButton& src);
 
 };
 

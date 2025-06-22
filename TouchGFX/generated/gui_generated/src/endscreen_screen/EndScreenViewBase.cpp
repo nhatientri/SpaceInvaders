@@ -4,6 +4,7 @@
 #include <gui_generated/endscreen_screen/EndScreenViewBase.hpp>
 #include <touchgfx/Color.hpp>
 #include <images/BitmapDatabase.hpp>
+#include <texts/TextKeysAndLanguages.hpp>
 
 EndScreenViewBase::EndScreenViewBase() :
     buttonCallback(this, &EndScreenViewBase::buttonCallbackHandler)
@@ -12,15 +13,22 @@ EndScreenViewBase::EndScreenViewBase() :
     __background.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     add(__background);
 
-    restartButton.setXY(0, 215);
-    restartButton.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_50_MEDIUM_ROUNDED_NORMAL_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_50_MEDIUM_ROUNDED_PRESSED_ID));
+    restartButton.setXY(33, 223);
+    restartButton.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_50_SMALL_ROUND_INACTIVE_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_50_SMALL_ROUND_INACTIVE_ID));
     restartButton.setAction(buttonCallback);
     add(restartButton);
 
+    endBackground.setXY(0, -20);
     endBackground.setBitmap(touchgfx::Bitmap(BITMAP_SPACEINVADERGAMEOVER_ID));
-    endBackground.setPosition(0, 0, 240, 320);
-    endBackground.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
     add(endBackground);
+
+    scoreText.setXY(103, 121);
+    scoreText.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    scoreText.setLinespacing(0);
+    scoreText.setWildcard(touchgfx::TypedText(T_SCOREBUFFER).getText());
+    scoreText.resizeToCurrentText();
+    scoreText.setTypedText(touchgfx::TypedText(T_SCORE));
+    add(scoreText);
 }
 
 EndScreenViewBase::~EndScreenViewBase()

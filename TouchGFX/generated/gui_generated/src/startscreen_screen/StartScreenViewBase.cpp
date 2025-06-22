@@ -13,17 +13,16 @@ StartScreenViewBase::StartScreenViewBase() :
     __background.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     add(__background);
 
-    playButton.setXY(0, 227);
-    playButton.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_50_MEDIUM_ROUNDED_ACTION_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_50_MEDIUM_ROUNDED_DISABLED_ID));
+    playButton.setXY(33, 237);
+    playButton.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_50_SMALL_ROUND_INACTIVE_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_50_SMALL_ROUND_INACTIVE_ID));
     playButton.setLabelText(touchgfx::TypedText(T___SINGLEUSE_27QB));
     playButton.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     playButton.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
     playButton.setAction(buttonCallback);
     add(playButton);
 
+    startBackground.setXY(0, -20);
     startBackground.setBitmap(touchgfx::Bitmap(BITMAP_SPACEINVADERSTART_ID));
-    startBackground.setPosition(0, 0, 240, 320);
-    startBackground.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
     add(startBackground);
 }
 

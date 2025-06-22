@@ -9,7 +9,8 @@
 #include <gui/endscreen_screen/EndScreenPresenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/widgets/Button.hpp>
-#include <touchgfx/widgets/ScalableImage.hpp>
+#include <touchgfx/widgets/Image.hpp>
+#include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 
 class EndScreenViewBase : public touchgfx::View<EndScreenPresenter>
 {
@@ -28,7 +29,8 @@ protected:
      */
     touchgfx::Box __background;
     touchgfx::Button restartButton;
-    touchgfx::ScalableImage endBackground;
+    touchgfx::Image endBackground;
+    touchgfx::TextAreaWithOneWildcard scoreText;
 
 private:
 
