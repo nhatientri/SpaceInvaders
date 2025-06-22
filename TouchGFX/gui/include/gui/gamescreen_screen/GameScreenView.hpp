@@ -18,6 +18,7 @@ public:
     void spawnBullet();  // Tạo viên đạn mới
     void spawnEnemyBullet(int x, int y);
     bool bulletCollides(const Image& bullet, const Image& alien);
+    void playShootSound();
     virtual void handleTickEvent() override;
     uint32_t getRandom();
     uint32_t getRandomInRange(uint32_t min, uint32_t max);

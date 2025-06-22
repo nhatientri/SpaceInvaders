@@ -3,6 +3,7 @@
 #include "main.h"
 
 extern "C" RNG_HandleTypeDef hrng;
+extern "C" TIM_HandleTypeDef htim2;
 
 GameScreenView::GameScreenView()
 {
@@ -79,23 +80,6 @@ void GameScreenView::updatePlayerPosition(int x) {
 void GameScreenView::updateADCValue(int value) {
 	Unicode::snprintf(textArea1Buffer, sizeof(textArea1Buffer),"%d", value);
 	textArea1.invalidate();
-}
-
-void GameScreenView::spawnBullet()
-{
-    for (int i = 0; i < MAX_BULLETS; ++i)
-    {
-        if (!bullets[i].isVisible())
-        {
-            bullets[i].setXY(
-                player.getX() + player.getWidth() / 2 - bullets[i].getWidth() / 2,
-                player.getY() - bullets[i].getHeight());
-
-            bullets[i].setVisible(true);
-            bullets[i].invalidate();
-            break;  // chỉ bắn 1 viên mỗi lần
-        }
-    }
 }
 
 void GameScreenView::handleTickEvent()
@@ -283,6 +267,24 @@ uint32_t GameScreenView::getRandomInRange(uint32_t min, uint32_t max)
     return getRandom() % (max - min + 1) + min;
 }
 
+void GameScreenView::spawnBullet()
+{
+    for (int i = 0; i < MAX_BULLETS; ++i)
+    {
+        if (!bullets[i].isVisible())
+        {
+            bullets[i].setXY(
+                player.getX() + player.getWidth() / 2 - bullets[i].getWidth() / 2,
+                player.getY() - bullets[i].getHeight());
+
+            bullets[i].setVisible(true);
+            bullets[i].invalidate();
+            playShootSound();
+            break;  // chỉ bắn 1 viên mỗi lần
+        }
+    }
+}
+
 void GameScreenView::spawnEnemyBullet(int x, int y)
 {
     for (int i = 0; i < MAX_ENEMY_BULLETS; ++i)
@@ -295,4 +297,15 @@ void GameScreenView::spawnEnemyBullet(int x, int y)
             break;
         }
     }
+}
+
+
+void GameScreenView::playShootSound()
+{
+    HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1);
+    __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_1, 500);  // 50% duty
+
+    HAL_Delay(50);  // phát 50ms – có thể thay bằng timer khác nếu muốn non-blocking
+
+    HAL_TIM_PWM_Stop(&htim2, TIM_CHANNEL_1);
 }
