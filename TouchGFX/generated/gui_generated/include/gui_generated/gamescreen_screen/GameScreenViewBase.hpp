@@ -8,6 +8,7 @@
 #include <mvp/View.hpp>
 #include <gui/gamescreen_screen/GameScreenPresenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
+#include <touchgfx/widgets/ScalableImage.hpp>
 #include <touchgfx/widgets/Image.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 
@@ -27,16 +28,14 @@ protected:
      * Member Declarations
      */
     touchgfx::Box __background;
+    touchgfx::ScalableImage gameBackground;
     touchgfx::Image player;
-    touchgfx::TextAreaWithOneWildcard textArea1;
     touchgfx::TextAreaWithOneWildcard scoreText;
     touchgfx::TextAreaWithOneWildcard highScoreText;
 
     /*
      * Wildcard Buffers
      */
-    static const uint16_t TEXTAREA1_SIZE = 12;
-    touchgfx::Unicode::UnicodeChar textArea1Buffer[TEXTAREA1_SIZE];
     static const uint16_t SCORETEXT_SIZE = 8;
     touchgfx::Unicode::UnicodeChar scoreTextBuffer[SCORETEXT_SIZE];
     static const uint16_t HIGHSCORETEXT_SIZE = 8;

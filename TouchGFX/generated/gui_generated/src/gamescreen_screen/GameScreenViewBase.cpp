@@ -12,17 +12,14 @@ GameScreenViewBase::GameScreenViewBase()
     __background.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     add(__background);
 
+    gameBackground.setBitmap(touchgfx::Bitmap(BITMAP_SPACEINVADERGLOOMYBG_ID));
+    gameBackground.setPosition(0, 0, 240, 320);
+    gameBackground.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
+    add(gameBackground);
+
     player.setXY(105, 275);
     player.setBitmap(touchgfx::Bitmap(BITMAP_PLAYER_ID));
     add(player);
-
-    textArea1.setPosition(0, 290, 240, 30);
-    textArea1.setColor(touchgfx::Color::getColorFromRGB(255, 0, 34));
-    textArea1.setLinespacing(0);
-    Unicode::snprintf(textArea1Buffer, TEXTAREA1_SIZE, "%s", touchgfx::TypedText(T_ADCBUFFER).getText());
-    textArea1.setWildcard(textArea1Buffer);
-    textArea1.setTypedText(touchgfx::TypedText(T_ADCTEXT));
-    add(textArea1);
 
     scoreText.setXY(27, 0);
     scoreText.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));

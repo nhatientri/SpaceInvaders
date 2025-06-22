@@ -26,6 +26,8 @@ public:
     // GameScreen
     void gotoGameScreenScreenSlideTransitionEast();
 
+    void gotoGameScreenScreenSlideTransitionWest();
+
 protected:
     touchgfx::Callback<FrontendApplicationBase> transitionCallback;
     FrontendHeap& frontendHeap;
@@ -36,6 +38,8 @@ protected:
 
     // GameScreen
     void gotoGameScreenScreenSlideTransitionEastImpl();
+
+    void gotoGameScreenScreenSlideTransitionWestImpl();
 };
 
 #endif // FRONTENDAPPLICATIONBASE_HPP

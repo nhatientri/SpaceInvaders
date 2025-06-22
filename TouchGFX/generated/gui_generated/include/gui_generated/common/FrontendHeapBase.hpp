@@ -18,6 +18,8 @@
 #include <gui/startscreen_screen/StartScreenPresenter.hpp>
 #include <gui/gamescreen_screen/GameScreenView.hpp>
 #include <gui/gamescreen_screen/GameScreenPresenter.hpp>
+#include <gui/endscreen_screen/EndScreenView.hpp>
+#include <gui/endscreen_screen/EndScreenPresenter.hpp>
 
 
 /**
@@ -42,7 +44,8 @@ public:
      */
     typedef touchgfx::meta::TypeList< StartScreenView,
             touchgfx::meta::TypeList< GameScreenView,
-            touchgfx::meta::Nil >
+            touchgfx::meta::TypeList< EndScreenView,
+            touchgfx::meta::Nil > >
             > GeneratedViewTypes;
 
     /**
@@ -56,7 +59,8 @@ public:
      */
     typedef touchgfx::meta::TypeList< StartScreenPresenter,
             touchgfx::meta::TypeList< GameScreenPresenter,
-            touchgfx::meta::Nil >
+            touchgfx::meta::TypeList< EndScreenPresenter,
+            touchgfx::meta::Nil > >
             > GeneratedPresenterTypes;
 
     /**
@@ -70,7 +74,8 @@ public:
      */
     typedef touchgfx::meta::TypeList< touchgfx::NoTransition,
             touchgfx::meta::TypeList< SlideTransition<EAST>,
-            touchgfx::meta::Nil >
+            touchgfx::meta::TypeList< SlideTransition<WEST>,
+            touchgfx::meta::Nil > >
             > GeneratedTransitionTypes;
 
     /**

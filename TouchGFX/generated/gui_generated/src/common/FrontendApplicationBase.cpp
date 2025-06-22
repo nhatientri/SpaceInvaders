@@ -13,6 +13,8 @@
 #include <gui/startscreen_screen/StartScreenPresenter.hpp>
 #include <gui/gamescreen_screen/GameScreenView.hpp>
 #include <gui/gamescreen_screen/GameScreenPresenter.hpp>
+#include <gui/endscreen_screen/EndScreenView.hpp>
+#include <gui/endscreen_screen/EndScreenPresenter.hpp>
 
 using namespace touchgfx;
 
@@ -57,4 +59,15 @@ void FrontendApplicationBase::gotoGameScreenScreenSlideTransitionEast()
 void FrontendApplicationBase::gotoGameScreenScreenSlideTransitionEastImpl()
 {
     touchgfx::makeTransition<GameScreenView, GameScreenPresenter, touchgfx::SlideTransition<EAST>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+void FrontendApplicationBase::gotoGameScreenScreenSlideTransitionWest()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotoGameScreenScreenSlideTransitionWestImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoGameScreenScreenSlideTransitionWestImpl()
+{
+    touchgfx::makeTransition<GameScreenView, GameScreenPresenter, touchgfx::SlideTransition<WEST>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }

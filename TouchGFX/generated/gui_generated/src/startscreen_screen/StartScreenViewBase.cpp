@@ -14,12 +14,17 @@ StartScreenViewBase::StartScreenViewBase() :
     add(__background);
 
     playButton.setXY(0, 227);
-    playButton.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_50_MEDIUM_ROUNDED_NORMAL_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_50_MEDIUM_ROUNDED_PRESSED_ID));
+    playButton.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_50_MEDIUM_ROUNDED_ACTION_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_50_MEDIUM_ROUNDED_DISABLED_ID));
     playButton.setLabelText(touchgfx::TypedText(T___SINGLEUSE_27QB));
     playButton.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     playButton.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
     playButton.setAction(buttonCallback);
     add(playButton);
+
+    startBackground.setBitmap(touchgfx::Bitmap(BITMAP_SPACEINVADERSTART_ID));
+    startBackground.setPosition(0, 0, 240, 320);
+    startBackground.setScalingAlgorithm(touchgfx::ScalableImage::NEAREST_NEIGHBOR);
+    add(startBackground);
 }
 
 StartScreenViewBase::~StartScreenViewBase()

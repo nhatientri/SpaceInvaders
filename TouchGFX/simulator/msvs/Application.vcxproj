@@ -27,6 +27,9 @@
     <ClCompile Include="..\..\gui\src\startscreen_screen\StartScreenPresenter.cpp"/>
     <ClCompile Include="..\..\gui\src\startscreen_screen\StartScreenView.cpp"/>
     <ClCompile Include="..\..\generated\gui_generated\src\startscreen_screen\StartScreenViewBase.cpp"/>
+    <ClCompile Include="..\..\gui\src\endscreen_screen\EndScreenPresenter.cpp"/>
+    <ClCompile Include="..\..\gui\src\endscreen_screen\EndScreenView.cpp"/>
+    <ClCompile Include="..\..\generated\gui_generated\src\endscreen_screen\EndScreenViewBase.cpp"/>
   </ItemGroup>
   <ItemGroup>
     <None Include="$(ApplicationRoot)\assets\texts\texts.xml"/>
@@ -183,6 +186,9 @@
     <ClInclude Include="..\..\gui\include\gui\startscreen_screen\StartScreenPresenter.hpp"/>
     <ClInclude Include="..\..\gui\include\gui\startscreen_screen\StartScreenView.hpp"/>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\startscreen_screen\StartScreenViewBase.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\endscreen_screen\EndScreenPresenter.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\endscreen_screen\EndScreenView.hpp"/>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\endscreen_screen\EndScreenViewBase.hpp"/>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="$(ApplicationRoot)\generated\simulator\touchgfx.rc"/>

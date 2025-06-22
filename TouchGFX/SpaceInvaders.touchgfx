@@ -10,8 +10,8 @@
             "Y": 227,
             "Width": 240,
             "Height": 50,
-            "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_50_medium_rounded_pressed.png",
-            "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_50_medium_rounded_normal.png",
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_50_medium_rounded_disabled.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_50_medium_rounded_action.png",
             "TextId": "__SingleUse_27QB",
             "ReleasedColor": {
               "Red": 255,
@@ -23,8 +23,15 @@
               "Green": 255,
               "Blue": 255
             },
-            "TextRotation": "0",
-            "Preset": "alternate_theme\\presets\\button\\regular\\height_50\\medium_rounded_normal.json"
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ScalableImage",
+            "Name": "startBackground",
+            "Width": 240,
+            "Height": 320,
+            "Filename": "SpaceInvaderStart.png",
+            "ScalingAlgorithm": "Nearest-neighbor"
           }
         ],
         "Interactions": [
@@ -47,6 +54,14 @@
         "Name": "GameScreen",
         "Components": [
           {
+            "Type": "ScalableImage",
+            "Name": "gameBackground",
+            "Width": 240,
+            "Height": 320,
+            "Filename": "SpaceInvaderGloomyBg.png",
+            "ScalingAlgorithm": "Nearest-neighbor"
+          },
+          {
             "Type": "Image",
             "Name": "player",
             "X": 105,
@@ -54,24 +69,6 @@
             "Width": 30,
             "Height": 15,
             "RelativeFilename": "player.png"
-          },
-          {
-            "Type": "TextArea",
-            "Name": "textArea1",
-            "Y": 290,
-            "Width": 240,
-            "Height": 30,
-            "TextId": "adcText",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 255,
-              "Blue": 34
-            },
-            "Wildcard1": {
-              "TextId": "adcBuffer",
-              "UseBuffer": true,
-              "BufferSize": 12
-            }
           },
           {
             "Type": "TextArea",
@@ -115,6 +112,44 @@
           }
         ],
         "Interactions": []
+      },
+      {
+        "Name": "EndScreen",
+        "Components": [
+          {
+            "Type": "Button",
+            "Name": "restartButton",
+            "Y": 215,
+            "Width": 240,
+            "Height": 50,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_50_medium_rounded_pressed.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_50_medium_rounded_normal.png",
+            "Preset": "alternate_theme\\presets\\button\\regular\\height_50\\medium_rounded_normal.json"
+          },
+          {
+            "Type": "ScalableImage",
+            "Name": "endBackground",
+            "Width": 240,
+            "Height": 320,
+            "Filename": "SpaceInvaderGameOver.png",
+            "ScalingAlgorithm": "Nearest-neighbor"
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "Interaction1",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "restartButton"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "West",
+              "ActionComponent": "GameScreen"
+            }
+          }
+        ]
       }
     ],
     "CustomContainerDefinitions": [],

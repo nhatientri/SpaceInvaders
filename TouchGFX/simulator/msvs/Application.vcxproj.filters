@@ -196,6 +196,18 @@
     <Filter Include="Source Files\generated\gui_generated\startscreen_screen">
       <UniqueIdentifier>C1093A3E-574F-23DC-BDDA-849D4DD4743A</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\gui\endscreen_screen">
+      <UniqueIdentifier>55BB2F0C-0AC6-85A8-3C21-BE510325DA8D</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\endscreen_screen">
+      <UniqueIdentifier>C9949252-43A5-5110-4795-966A00844E78</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\endscreen_screen">
+      <UniqueIdentifier>94733540-8F68-1C79-4931-84A074FE7476</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\endscreen_screen">
+      <UniqueIdentifier>A4B231ED-7129-3544-E449-F7A1BD696D7C</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(TouchGFXReleasePath)\framework\source\platform\driver\touch\SDL2TouchController.cpp">
@@ -245,6 +257,15 @@
     </ClCompile>
     <ClCompile Include="..\..\generated\gui_generated\src\startscreen_screen\StartScreenViewBase.cpp">
       <Filter>Source Files\generated\gui_generated\startscreen_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\endscreen_screen\EndScreenPresenter.cpp">
+      <Filter>Source Files\gui\endscreen_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\endscreen_screen\EndScreenView.cpp">
+      <Filter>Source Files\gui\endscreen_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\endscreen_screen\EndScreenViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\endscreen_screen</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -705,6 +726,15 @@
     </ClInclude>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\startscreen_screen\StartScreenViewBase.hpp">
       <Filter>Header Files\generated\gui_generated\startscreen_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\endscreen_screen\EndScreenPresenter.hpp">
+      <Filter>Header Files\gui\endscreen_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\endscreen_screen\EndScreenView.hpp">
+      <Filter>Header Files\gui\endscreen_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\endscreen_screen\EndScreenViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\endscreen_screen</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
