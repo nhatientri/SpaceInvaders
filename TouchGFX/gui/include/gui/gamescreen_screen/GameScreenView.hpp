@@ -14,7 +14,6 @@ public:
     virtual void setupScreen();
     virtual void tearDownScreen();
     void updatePlayerPosition(int x);
-    void updateADCValue(int value);
     void spawnBullet();  // Tạo viên đạn mới
     void spawnEnemyBullet(int x, int y);
     bool bulletCollides(const Image& bullet, const Image& alien);

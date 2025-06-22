@@ -24,7 +24,6 @@ void Model::tick() {
         	xPos = 0;
         }
         modelListener->updatePlayerX(xPos);
-        modelListener->updateADCValue(adc_value);
     }
 
     // Biến static để giữ trạng thái giữa các tick
@@ -42,7 +41,7 @@ void Model::tick() {
         modelListener->fireBullet();
 
         // Đặt lại thời gian chờ giữa các phát (tùy bạn chỉnh)
-        fireCooldown = 10;  // 10 tick → ~166ms nếu tick = 60Hz
+        fireCooldown = 20;  // 10 tick → ~166ms nếu tick = 60Hz
     }
 
 }

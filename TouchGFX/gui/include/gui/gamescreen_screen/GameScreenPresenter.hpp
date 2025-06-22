@@ -25,7 +25,6 @@ public:
      */
     virtual void deactivate();
     void updatePlayerX(int x) override;
-    void updateADCValue(int value) override;
     void fireBullet() override;
 
     virtual ~GameScreenPresenter() {}

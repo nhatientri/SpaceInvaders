@@ -14,13 +14,6 @@ void GameScreenView::setupScreen()
 {
     GameScreenViewBase::setupScreen();
 
-    for (int i = 0; i < MAX_BULLETS; ++i)
-    {
-        bullets[i].setBitmap(Bitmap(BITMAP_BULLET_ID));
-        bullets[i].setVisible(false);
-        add(bullets[i]);
-    }
-
     int startX = 15;
     int startY = 30;
     int spacingX = 35;
@@ -36,6 +29,14 @@ void GameScreenView::setupScreen()
             add(enemies[row][col]);
         }
     }
+
+    for (int i = 0; i < MAX_BULLETS; ++i)
+    {
+        bullets[i].setBitmap(Bitmap(BITMAP_BULLET_ID));
+        bullets[i].setVisible(false);
+        add(bullets[i]);
+    }
+
 
     for (int i = 0; i < MAX_ENEMY_BULLETS; ++i)
     {
@@ -60,8 +61,6 @@ void GameScreenView::setupScreen()
     scoreText.invalidate();
     highScoreText.invalidate();
 
-
-
 }
 
 void GameScreenView::tearDownScreen()
@@ -75,11 +74,6 @@ void GameScreenView::updatePlayerPosition(int x) {
     if (playerX < 0) playerX = 0;
     if (playerX > 210) playerX = 210;
     player.moveTo(playerX, player.getY());
-}
-
-void GameScreenView::updateADCValue(int value) {
-	Unicode::snprintf(textArea1Buffer, sizeof(textArea1Buffer),"%d", value);
-	textArea1.invalidate();
 }
 
 void GameScreenView::handleTickEvent()
@@ -223,6 +217,7 @@ void GameScreenView::handleTickEvent()
                 {
                     gameOverTriggered = true;
                     // TODO: Show Game Over UI, stop game loop, etc.
+                    static_cast<FrontendApplication*>(Application::getInstance())->gotoEndScreenScreenSlideTransitionEast();
                 }
             }
 

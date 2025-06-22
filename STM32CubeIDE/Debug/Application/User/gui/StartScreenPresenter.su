@@ -1,6 +1,5 @@
 ../../TouchGFX/gui/include/gui/model/ModelListener.hpp:12:18:virtual void ModelListener::updatePlayerX(int)	0	static
-../../TouchGFX/gui/include/gui/model/ModelListener.hpp:13:18:virtual void ModelListener::updateADCValue(int)	0	static
-../../TouchGFX/gui/include/gui/model/ModelListener.hpp:14:18:virtual void ModelListener::fireBullet()	0	static
+../../TouchGFX/gui/include/gui/model/ModelListener.hpp:13:18:virtual void ModelListener::fireBullet()	0	static
 ../../TouchGFX/gui/include/gui/startscreen_screen/StartScreenPresenter.hpp:28:13:StartScreenPresenter::~StartScreenPresenter()	0	static
 C:/TouchGFXProjects/SpaceInvaders/TouchGFX/gui/src/startscreen_screen/StartScreenPresenter.cpp:10:6:virtual void StartScreenPresenter::activate()	0	static
 ../../TouchGFX/gui/include/gui/startscreen_screen/StartScreenPresenter.hpp:28:13:virtual StartScreenPresenter::~StartScreenPresenter()	8	static
