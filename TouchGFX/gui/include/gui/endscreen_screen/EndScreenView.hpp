@@ -11,6 +11,8 @@ public:
     virtual ~EndScreenView() {}
     virtual void setupScreen();
     virtual void tearDownScreen();
+    void setFinalScore(int score);
+
 protected:
 };
 

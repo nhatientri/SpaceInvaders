@@ -177,7 +177,9 @@
             },
             "AutoSize": true,
             "Wildcard1": {
-              "TextId": "scoreBuffer"
+              "TextId": "scoreBuffer",
+              "UseBuffer": true,
+              "BufferSize": 8
             }
           }
         ],

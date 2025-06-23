@@ -217,6 +217,7 @@ void GameScreenView::handleTickEvent()
                 {
                     gameOverTriggered = true;
                     // TODO: Show Game Over UI, stop game loop, etc.
+                    static_cast<FrontendApplication*>(Application::getInstance())->setFinalScore(score);
                     static_cast<FrontendApplication*>(Application::getInstance())->gotoEndScreenScreenSlideTransitionEast();
                 }
             }

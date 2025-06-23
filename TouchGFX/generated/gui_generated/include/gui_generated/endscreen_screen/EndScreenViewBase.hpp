@@ -32,6 +32,12 @@ protected:
     touchgfx::Image endBackground;
     touchgfx::TextAreaWithOneWildcard scoreText;
 
+    /*
+     * Wildcard Buffers
+     */
+    static const uint16_t SCORETEXT_SIZE = 8;
+    touchgfx::Unicode::UnicodeChar scoreTextBuffer[SCORETEXT_SIZE];
+
 private:
 
     /*

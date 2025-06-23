@@ -25,7 +25,8 @@ EndScreenViewBase::EndScreenViewBase() :
     scoreText.setXY(103, 121);
     scoreText.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     scoreText.setLinespacing(0);
-    scoreText.setWildcard(touchgfx::TypedText(T_SCOREBUFFER).getText());
+    Unicode::snprintf(scoreTextBuffer, SCORETEXT_SIZE, "%s", touchgfx::TypedText(T_SCOREBUFFER).getText());
+    scoreText.setWildcard(scoreTextBuffer);
     scoreText.resizeToCurrentText();
     scoreText.setTypedText(touchgfx::TypedText(T_SCORE));
     add(scoreText);

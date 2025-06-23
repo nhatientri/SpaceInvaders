@@ -9,7 +9,8 @@ EndScreenPresenter::EndScreenPresenter(EndScreenView& v)
 
 void EndScreenPresenter::activate()
 {
-
+    int score = static_cast<FrontendApplication*>(Application::getInstance())->getFinalScore();
+    view.setFinalScore(score);
 }
 
 void EndScreenPresenter::deactivate()

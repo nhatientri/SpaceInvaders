@@ -18,7 +18,12 @@ public:
         model.tick();
         FrontendApplicationBase::handleTickEvent();
     }
+
+    void setFinalScore(int score) { finalScore = score; }
+    int getFinalScore() const { return finalScore; }
+
 private:
+    int finalScore = 0;
 };
 
 #endif // FRONTENDAPPLICATION_HPP
