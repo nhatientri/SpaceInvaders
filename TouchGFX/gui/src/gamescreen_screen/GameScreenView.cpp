@@ -60,7 +60,6 @@ void GameScreenView::setupScreen()
 
     scoreText.invalidate();
     highScoreText.invalidate();
-
 }
 
 void GameScreenView::tearDownScreen()
@@ -111,6 +110,7 @@ void GameScreenView::handleTickEvent()
                     bullets[b].setVisible(false);
                     enemies[row][col].setVisible(false);
 
+                    aliveEnemies--;
                     bullets[b].invalidate();
                     enemies[row][col].invalidate();
 
@@ -142,6 +142,11 @@ void GameScreenView::handleTickEvent()
             }
         }
     nextBullet:;
+    }
+
+    if (aliveEnemies == 0)
+    {
+    	spawnAliens();
     }
 
     tickCounter++;
@@ -305,3 +310,29 @@ void GameScreenView::playShootSound()
 
     HAL_TIM_PWM_Stop(&htim2, TIM_CHANNEL_1);
 }
+
+void GameScreenView::spawnAliens()
+{
+    int startX = 15;
+    int startY = 30;
+    int spacingX = 35;
+    int spacingY = 25;
+
+    for (int row = 0; row < ROWS; ++row)
+    {
+        for (int col = 0; col < COLS; ++col)
+        {
+            enemies[row][col].setBitmap(Bitmap(enemyBitmaps[row]));
+            enemies[row][col].setXY(startX + col * spacingX, startY + row * spacingY);
+            enemies[row][col].setVisible(true);
+            enemies[row][col].invalidate();
+        }
+    }
+
+    aliveEnemies = ROWS * COLS;
+
+    // Tăng độ khó
+    if (stepDelay > 2)
+        stepDelay--;
+}
+

@@ -13,6 +13,7 @@ public:
     virtual ~GameScreenView() {}
     virtual void setupScreen();
     virtual void tearDownScreen();
+    void spawnAliens();
     void updatePlayerPosition(int x);
     void spawnBullet();
     void spawnEnemyBullet(int x, int y);
@@ -54,6 +55,8 @@ protected:
 
     int lives = MAX_LIVES;
     bool gameOverTriggered = false;
+
+    int aliveEnemies = ROWS * COLS;
 };
 
 

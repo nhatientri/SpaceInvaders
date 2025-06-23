@@ -26,8 +26,6 @@ void Model::tick() {
         modelListener->updatePlayerX(xPos);
     }
 
-    // Biến static để giữ trạng thái giữa các tick
-    static int fireCooldown = 0;
 
     // Giảm cooldown nếu đang > 0
     if (fireCooldown > 0)
